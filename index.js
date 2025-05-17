@@ -17,6 +17,12 @@ App.use(express.json());
 App.use("/todo", TodoRouter);
 App.use("/auth", authRouter);
 
+App.get("/", (req, res) => {
+    res.send(
+    {
+        message: "Hello World"
+    })
+});
 
 
 mongoose
