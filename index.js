@@ -17,7 +17,9 @@ App.use(express.json());
 App.use("/todo", TodoRouter);
 App.use("/auth", authRouter);
 
-
+app.get("/", (req, res) => {
+  res.send("Backend server is running!");
+});
 
 mongoose
 .connect(process.env.MONGO_URI).
