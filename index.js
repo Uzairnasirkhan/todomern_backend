@@ -10,7 +10,7 @@ const App = express()
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://merntodoapp-delta.vercel.app/"
+    "https://merntodoapp-delta.vercel.app"
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -18,8 +18,6 @@ const corsOptions = {
 };
 
 App.use(cors(corsOptions));
-App.options("*", cors(corsOptions));
-
 
 App.use(express.json());
 
